@@ -322,7 +322,7 @@ body {
   
     /* ---------- Operating Agreements Section Styles ---------- */
     .operating-agreements-section {
-      background-color: #f5f5f5; 
+      background-color: #ffffff; 
       padding: 60px 0;
       width: 100%;
     }
@@ -391,7 +391,7 @@ body {
 
     /* Dataset Card Section Styles */
     .dataset-card-section {
-      background-color: #ffffff;
+      background-color: #f5f5f5;
       width: 100%;
       padding: 60px 0;
     }
@@ -441,79 +441,4 @@ body {
     .json-line:not(.indent-1):hover { background-color: #ffffcc !important; }
 
 
-
-    /* Shared container styling for bottom sections */
-    .bottom-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-    /* Call for Participation Section */
-    .call-for-participation {
-      background-color: #ffffff;
-      width: 100%;
-      padding-top: 40px;
-      padding-bottom: 60px;
-    }
-    .call-for-participation h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      margin-bottom: 40px;
-      font-size: 3rem;
-      color: #333;
-    }
-    .call-for-participation .bottom-body {
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 1.15rem;
-      line-height: 1.7;
-      color: #666;
-      text-align: justify;
-      margin-bottom: 20px;
-    }
-    .call-for-participation .contact-info p {
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 1.1rem;
-      color: #666;
-      text-align: justify;
-    }
-    /* Citation Section */
-    .citation-section {
-      background-color: #ffffff;
-      width: 100%;
-      padding-top: 40px;
-      padding-bottom: 60px;
-    }
-    .citation-section h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      margin-bottom: 40px;
-      font-size: 3rem;
-      color: #333;
-    }
-    .citation-code {
-      background-color: #f5f5f5;
-      padding: 16px;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-family: monospace;
-      font-size: 0.9rem;
-      text-align: left;
-    }
-    /* Footer Section */
-    .site-footer {
-      background-color: #ffffff;
-      width: 100%;
-      padding-top: 16px;
-      padding-bottom: 16px;
-    }
-    .footer-container {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .footer-container p {
-      font-family: 'Noto Sans', sans-serif;
-      font-size: 0.9rem;
-      color: #666;
-    }
+    
