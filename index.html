@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LawyerBench - Inside Lawyer's Thought Process</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/logo.jpg" />
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/bulma.min.css" />
+  <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css" />
+  <link rel="stylesheet" href="./assets/css/bulma-slider.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"  />
+  <link rel="stylesheet" href="./assets/css/index.css" />
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script src="https://kit.fontawesome.com/c79a85d960.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/bulma-carousel.min.js"></script>
+  <script src="./assets/js/bulma-slider.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+
+</head>
+<body>
+
+
+
+  <!-- Header Section -->
+  <header>
+    <h1 class="header-title">
+      LawFlow: Collecting and Simulating<br>Lawyer's Thought Process
+    </h1>
+  </header>
+    
+
+
+  <!-- Overview Section -->
+  <section class="overview-section">
+    <div class="overview-container">
+      <h2>Overview</h2>
+      <ul>
+        <li>
+          LawyerBench is revolutionizing legal AI by navigating lawyer's thought process in the entire business entity formation process—from client consultations to customer interaction to note taking to drafting and filing legal documents. 
+        </li>
+        <li>
+          The collected process data will be used for training a cutting-edge Legal LLM Agent that navigates the entirety of legal tasks and assists lawyers in their legal processing with much less cognitive burdens. This project doesn’t just automate legal workflows; it builds a rich dataset to fuel the next generation of AI-powered legal reasoning. 
+        </li>
+      </ul>
+      <div class="overview-gallery">
+        <img id="overview-image" src="./assets/images/projDiagram.png" alt="Project Diagram">
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = [
+        { src: './assets/images/projDiagram.png', alt: 'Project Diagram' },
+        { src: './assets/gifs/IntroGif.gif', alt: 'Platform Tool Work Demo' }
+      ];
+      let currentIndex = 0;
+      const overviewImage = document.getElementById('overview-image');
+      const prevButton = document.getElementById('prev-button');
+      const nextButton = document.getElementById('next-button');
+  
+      prevButton.addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        overviewImage.src = images[currentIndex].src;
+        overviewImage.alt = images[currentIndex].alt;
+      });
+  
+      nextButton.addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % images.length;
+        overviewImage.src = images[currentIndex].src;
+        overviewImage.alt = images[currentIndex].alt;
+      });
+    });
+  </script>
+
+
+
+  <!-- ---------- Platform Section ---------- -->
+<section class="platform-section">
+    <div class="platform-container">
+      <h2>Data Collection Platform</h2>
+      <p class="platform-description">
+        Our database captures real-world business entity formation scenarios, starting with a seed scenario provided by a local business. Through conversations with the business owner, a lawyer initiates the legal process, meticulously documenting and taking notes of each step—from initial discussions to formal filings. The process culminates in a finalized agreement document, serving as the definitive legal outcome.
+      </p>
+      <!-- <div class="video-container">
+        <video controls>
+          <source src="./assets/videos/ToolVideo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div> -->
+      <h3 class="platform-how">How It Works:</h3>
+      <ul class="platform-bullets">
+        <li>📌 <strong>1. Log In</strong> – Secure access for authorized users.</li>
+        <li>📌 <strong>2. Create a New Project & Invite Collaborators</strong> – Launch projects (e.g., "Spring 2025 Entity Formation") and add RAs or professors.</li>
+        <li>📌 <strong>3. High-Level Planning Page</strong> – Visualize tasks/sub-tasks (44 total) in a node-based workflow with recommended sequences.</li>
+        <li>📌 <strong>4. Features Page</strong> – Conduct Zoom calls, take notes, edit legal documents, and access research templates—all in one place.</li>
+        <li>📌 <strong>5. Automatic Data Collection</strong> – Every action is logged in MongoDB, creating a foundation for analytics and future LLM training.</li>
+      </ul>
+    </div>
+  </section>
+  
+ 
+
+  
+  <!-- ---------- Entity Formation Workflow Section ---------- -->
+<section class="entity-formation-section">
+    <div class="entity-formation-container">
+      <h2>Entity Formation Workflow</h2>
+      <p class="entity-workflow-intro">
+        The higher-level planning stage is visualized within our tool, as demonstrated in the GIF below, allowing users to navigate workflows with precision and ease. 🚀
+      </p>
+      <div class="entity-gif-container">
+        <img src="./assets/gifs/EntityGif.gif" alt="Diagram inside the tool">
+      </div>
+      <p class="entity-workflow-description">
+        Our business entity formation process is structured into five major tasks, each representing a crucial phase of legal workflow. 
+        Within each task, multiple sub-tasks break down the process into manageable, actionable steps.<br><br>
+        For instance, a task like “Gather Client Information” includes sub-tasks such as note-taking, gap analysis, 
+        and targeted searches—all seamlessly integrated within our node-based structure. 
+        This structured approach ensures clarity, efficiency, and consistency across every stage of the legal process.
+      </p>
+      <!-- Gallery -->
+      <div class="gallery-view">
+        <div class="gallery-image-container">
+          <img id="gallery-image" src="" alt="">
+          <div class="gallery-caption" id="gallery-caption"></div>
+        </div>
+        <button id="gallery-prev" class="gallery-nav">&larr;</button>
+        <button id="gallery-next" class="gallery-nav">&rarr;</button>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    // Gallery items data
+    const galleryItems = [
+      {
+        src: "./assets/images/MainTasks.png",
+        alt: "Main Tasks Diagram",
+        caption: "Main Tasks Diagram",
+        width: { xs: "100%", md: "80%" }
+      },
+      {
+        src: "./assets/images/TaskSubtask.png",
+        alt: "Sub-Task Diagram",
+        caption: "Sub-Task Diagram",
+        width: { xs: "90%", md: "40%" }
+      }
+    ];
+    
+    let currentGalleryIndex = 0;
+    const galleryImage = document.getElementById("gallery-image");
+    const galleryCaption = document.getElementById("gallery-caption");
+  
+    function updateGallery() {
+      const item = galleryItems[currentGalleryIndex];
+      galleryImage.src = item.src;
+      galleryImage.alt = item.alt;
+      galleryCaption.textContent = item.caption;
+      // Adjust image width based on viewport size
+      if (window.innerWidth < 768) {
+        galleryImage.style.width = item.width.xs;
+      } else {
+        galleryImage.style.width = item.width.md;
+      }
+    }
+  
+    document.getElementById("gallery-prev").addEventListener("click", function() {
+      currentGalleryIndex = (currentGalleryIndex - 1 + galleryItems.length) % galleryItems.length;
+      updateGallery();
+    });
+  
+    document.getElementById("gallery-next").addEventListener("click", function() {
+      currentGalleryIndex = (currentGalleryIndex + 1) % galleryItems.length;
+      updateGallery();
+    });
+  
+    window.addEventListener("resize", updateGallery);
+    updateGallery();
+  </script>
+
+
+
+
+  <!-- ---------- Workflow Visualization Section ---------- -->
+<section class="workflow-visualization-section">
+    <div class="workflow-visualization-container">
+      <h2>Workflow Visualization</h2>
+      <div class="video-container">
+        <video id="workflow-video" controls>
+          <source id="workflow-video-source" src="" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="workflow-caption" id="workflow-caption"></p>
+      <button id="workflow-prev" class="workflow-nav">&#8592;</button>
+      <button id="workflow-next" class="workflow-nav">&#8594;</button>
+    </div>
+  </section>
+  
+
+  <script>
+    (function(){
+      const videos = [
+        {
+          src: "./assets/videos/vid1.mov",
+          alt: "Scenario 1",
+          caption: "Scenario 1"
+        },
+        {
+          src: "./assets/videos/vid2.mov",
+          alt: "Scenario 2",
+          caption: "Scenario 2"
+        }
+      ];
+      let currentIndex = 0;
+      const videoElement = document.getElementById('workflow-video');
+      const sourceElement = document.getElementById('workflow-video-source');
+      const captionElement = document.getElementById('workflow-caption');
+      
+      function updateVideo() {
+        const currentVideo = videos[currentIndex];
+        sourceElement.src = currentVideo.src;
+        // Reload the video to update the source
+        videoElement.load();
+        captionElement.textContent = currentVideo.caption;
+      }
+      
+      document.getElementById('workflow-prev').addEventListener('click', function(){
+        currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+        updateVideo();
+      });
+      document.getElementById('workflow-next').addEventListener('click', function(){
+        currentIndex = (currentIndex + 1) % videos.length;
+        updateVideo();
+      });
+      
+      // Initialize the video display
+      updateVideo();
+    })();
+  </script>
+  
+
+  <!-- ---------- Sample Operating Agreements Section ---------- -->
+<section class="operating-agreements-section">
+    <div class="operating-container">
+      <h2 class="section-title">Generated Operating Agreements</h2>
+      <p class="section-description">
+        Our database captures real-world business entity formation scenarios, starting with a seed scenario provided by a local business. Through conversations with the business owner, a lawyer initiates the legal process, meticulously documenting each step—from initial discussions to formal filings. The process culminates in a finalized agreement document, serving as the definitive legal outcome.
+      </p>
+      <!-- Flex container to hold two columns -->
+      <div class="agreements-grid">
+        <!-- Column 1 -->
+        <div class="agreement-column">
+          <div class="agreement-example" data-index="0">
+            <div class="agreement-tabs">
+              <button class="tab-button active" data-tab="0">Lawyer's Memo</button>
+              <button class="tab-button" data-tab="1">Seed Scenario</button>
+              <button class="tab-button" data-tab="2">Final Operating Agreement</button>
+            </div>
+            <div class="tab-content active" data-content="0">
+              <img src="./assets/gifs/Trans1.gif" alt="Intermediate Transformation">
+            </div>
+            <div class="tab-content" data-content="1">
+              <iframe src="./assets/docs/Prompt1.pdf" title="Input Prompt"></iframe>
+            </div>
+            <div class="tab-content" data-content="2">
+              <iframe src="./assets/docs/OA1.pdf" title="Final Operating Agreement"></iframe>
+            </div>
+          </div>
+        </div>
+        <!-- Column 2 -->
+        <div class="agreement-column">
+          <div class="agreement-example" data-index="1">
+            <div class="agreement-tabs">
+              <button class="tab-button active" data-tab="0">Lawyer's Memo</button>
+              <button class="tab-button" data-tab="1">Seed Scenario</button>
+              <button class="tab-button" data-tab="2">Final Operating Agreement</button>
+            </div>
+            <div class="tab-content active" data-content="0">
+              <img src="./assets/gifs/Trans2.gif" alt="Intermediate Transformation">
+            </div>
+            <div class="tab-content" data-content="1">
+              <iframe src="./assets/docs/Prompt2.pdf" title="Input Prompt"></iframe>
+            </div>
+            <div class="tab-content" data-content="2">
+              <iframe src="./assets/docs/OA2.pdf" title="Final Operating Agreement"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    // Attach tab switching functionality to each agreement example
+    document.querySelectorAll('.agreement-example').forEach(function(agreement) {
+      const tabButtons = agreement.querySelectorAll('.tab-button');
+      const tabContents = agreement.querySelectorAll('.tab-content');
+      
+      tabButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          const tab = this.getAttribute('data-tab');
+          // Remove active state from all buttons and contents
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+          // Activate the clicked button and corresponding content
+          this.classList.add('active');
+          agreement.querySelector('.tab-content[data-content="'+tab+'"]').classList.add('active');
+        });
+      });
+    });
+  </script>
+  
+
+  <!-- ---------- Dataset Card Section ---------- -->
+<section class="dataset-card-section">
+    <div class="dataset-card-container">
+      <h2>Dataset Card</h2>
+      <p class="dataset-description">
+        We collected data from real tasks; here’s a sample from the dataset:
+      </p>
+      <div id="json-preview" class="json-preview"></div>
+    </div>
+  </section>
+  
+  
+  <script>
+    // The sample JSON string
+    const sampleJson = `{
+      "project_name": "September14",
+      "task_name": "Ask Default Questions",
+      "metadata": {
+        "action": "note taking",
+        "activity_type": "notes_change",
+        "timestamp": "2024-09-18T16:07:03.646+00:00",
+        "content": "<p>Asking open ended questions about nature of the business and their desires</p><p><br></p><p>Alpha: two clients are friends from college that share an interest in food and cooking. Alpha owns a food trailer and they have already began a taco food truck business wi</p>"
+      }
+    }`;
+  
+    let jsonData;
+    try {
+      jsonData = JSON.parse(sampleJson);
+    } catch (e) {
+      document.getElementById('json-preview').textContent = "Error parsing JSON";
+    }
+  
+    /**
+     * Recursively render JSON data.
+     * @param {any} data - JSON data.
+     * @param {number} indent - Current indent level.
+     * @returns {HTMLElement} The DOM element representing the rendered JSON.
+     */
+    function renderJSON(data, indent = 0) {
+      // Create a container div with left margin according to indent
+      const container = document.createElement('div');
+      container.style.marginLeft = (indent * 20) + 'px';
+  
+      if (typeof data !== 'object' || data === null) {
+        const span = document.createElement('span');
+        if (typeof data === 'number') {
+          span.style.color = 'blue';
+          span.textContent = data;
+        } else if (typeof data === 'string') {
+          span.style.color = '#006400';
+          span.textContent = `"${data}"`;
+        } else {
+          span.textContent = String(data);
+        }
+        container.appendChild(span);
+        return container;
+      }
+  
+      // If data is an array, render each item
+      if (Array.isArray(data)) {
+        const span = document.createElement('span');
+        span.textContent = '[ ';
+        data.forEach((item, idx) => {
+          span.appendChild(renderJSON(item, indent + 1));
+          if (idx < data.length - 1) {
+            span.appendChild(document.createTextNode(', '));
+          }
+        });
+        span.appendChild(document.createTextNode(' ]'));
+        container.appendChild(span);
+        return container;
+      }
+  
+      // Data is an object: render its key-value pairs
+      const openingBrace = document.createElement('span');
+      openingBrace.textContent = '{';
+      container.appendChild(openingBrace);
+  
+      const entries = Object.entries(data);
+      entries.forEach(([key, value], idx) => {
+        // Create a line (div) for this key/value pair
+        const line = document.createElement('div');
+        line.classList.add('json-line');
+        line.classList.add(`indent-${indent}`);
+        // Even/odd based on index
+        line.classList.add(idx % 2 === 0 ? 'even' : 'odd');
+  
+        // Render key in red
+        const keySpan = document.createElement('span');
+        keySpan.style.color = 'red';
+        keySpan.textContent = `"${key}"`;
+        line.appendChild(keySpan);
+        line.appendChild(document.createTextNode(': '));
+        // Render value recursively
+        line.appendChild(renderJSON(value, indent + 1));
+        // Append comma if not the last entry
+        if (idx < entries.length - 1) {
+          line.appendChild(document.createTextNode(','));
+        }
+        container.appendChild(line);
+      });
+  
+      const closingBrace = document.createElement('span');
+      closingBrace.textContent = '}';
+      container.appendChild(closingBrace);
+      return container;
+    }
+  
+    // Render the JSON and insert it into the preview container.
+    const previewContainer = document.getElementById('json-preview');
+    if (jsonData) {
+      previewContainer.appendChild(renderJSON(jsonData));
+    }
+  </script>
+  
+  <!-- ---------- Data Insights Section ---------- -->
+<section class="data-insights-section">
+    <div class="data-insights-container">
+      <h2>Data Insights</h2>
+      <div class="insights-gallery">
+        <!-- Research Question -->
+        <p id="insights-research" class="insights-research"></p>
+        <!-- Large Image -->
+        <img id="insights-image" src="" alt="" class="insights-image">
+        <!-- Insights as Bullet Points -->
+        <div class="insights-list-container">
+          <ul id="insights-list"></ul>
+        </div>
+        <!-- Navigation Arrows -->
+        <button id="insights-prev" class="insights-nav">&#8592;</button>
+        <button id="insights-next" class="insights-nav">&#8594;</button>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .data-insights-section {
+      background-color: #f5f5f5;
+      width: 100%;
+      padding: 60px 0;
+    }
+    .data-insights-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .data-insights-container h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      margin-bottom: 40px;
+      font-size: 3rem;
+      color: #333;
+    }
+    .insights-gallery {
+      position: relative;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .insights-research {
+      margin-bottom: 1rem;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 2rem;
+      font-style: bold;
+      color: #333;
+      margin-bottom: 2rem;
+
+    }
+    .insights-image {
+      max-width: 100%;
+      width: 80%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .insights-list-container {
+      text-align: center;
+      width: 80%;
+      margin: 1rem auto 0;
+    }
+    .insights-list-container ul {
+      padding-left: 1rem;
+      margin: 0;
+      text-align: justify;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #333;
+    }
+    .insights-list-container li {
+      margin-bottom: 0.5rem;
+    }
+    .insights-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+    }
+    #insights-prev {
+      left: 5%;
+    }
+    #insights-next {
+      right: 5%;
+    }
+    @media (max-width: 768px) {
+      .insights-image, .insights-list-container {
+        width: 100%;
+      }
+    }
+  </style>
+  
+  <script>
+    (function(){
+      const slides = [
+        {
+          researchQuestion: "Is the time distribution across subtasks consistent among different law RAs?",
+          src: "./assets/images/DataInsights1.png",
+          alt: "Data Insights Slide 1",
+          insights: [
+            "There is a consistent pattern across the four law RAs, with more than 50% of their time dedicated to Subtask 1: Gather Basic Information, and around 10–20% allocated to Subtask 2: Decide on recommendation to cline(s). Subtasks 3: Send memo and Subtask 4: Write an Operating Agreement each account for less than 20%, while Tax Treatment takes up less than 5% of the total time.",
+            "There is minimal variation among projects for each law RA, except for Law RA 3, who shows notable differences."
+          ]
+        },
+        {
+          researchQuestion: "Is the time distribution across nodes consistent among different law RAs?",
+          src: "./assets/images/dataInsights2.png",
+          alt: "Data Insights Slide 2",
+          insights: [
+            "There are large variations among each law RAs and differences across each law RA."
+          ]
+        },
+        {
+          researchQuestion: "What is the order in which law RAs complete their subtasks? Does it align with the predefined diagram?",
+          src: "./assets/images/dataInsights3.png",
+          alt: "Data Insights Slide 3",
+          insights: [
+            "Law RA 1 and Law RA 2 follow the order specified in the diagram. Interestingly, before writing the memo or Operating Agreement (OA), they often revisit Subtask 1: Gather Basic Information to refresh their understanding of the client’s details.",
+            "Law RA 3 and Law RA 4, however, tend to work on Subtask 1 and Subtask 2 interchangeably.",
+            "Another observed pattern, which the law RAs confirmed, is that they typically begin Subtask 3: Send Memo to Client only after working on Subtask 4: Write an Operating Agreement for a while."
+          ]
+        },
+        {
+          researchQuestion: "What is the order in which law RAs complete their subtasks? Does it align with the predefined diagram?",
+          src: "./assets/images/dataInsights4.png",
+          alt: "Data Insights Slide 4",
+          insights: [
+            "Law RA 1 and Law RA 2 switch between interactive, observable, and introspective subtasks, frequently alternating between different types.",
+            "In contrast, Law RA 3 and Law RA 4 tend to focus on one type of subtask at a time before moving on to the next. They only focus on observable tasks or introspective tasks at a time."
+          ]
+        }
+      ];
+      
+      let currentIndex = 0;
+      const researchElement = document.getElementById("insights-research");
+      const imageElement = document.getElementById("insights-image");
+      const listElement = document.getElementById("insights-list");
+      
+      function updateSlide() {
+        const slide = slides[currentIndex];
+        researchElement.textContent = slide.researchQuestion;
+        imageElement.src = slide.src;
+        imageElement.alt = slide.alt;
+        // Clear current list
+        listElement.innerHTML = "";
+        slide.insights.forEach(function(point) {
+          const li = document.createElement("li");
+          li.textContent = point;
+          listElement.appendChild(li);
+        });
+      }
+      
+      document.getElementById("insights-prev").addEventListener("click", function(){
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlide();
+      });
+      document.getElementById("insights-next").addEventListener("click", function(){
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlide();
+      });
+      
+      // Initialize the first slide
+      updateSlide();
+    })();
+  </script>
+  
+
+</body>
+</html>
