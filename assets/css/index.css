@@ -418,7 +418,7 @@ body {
     }
     /* JSON Preview Card Styles */
     .json-preview {
-      max-height: 400px;
+      max-height: 800px;
       overflow-y: auto;
       border: 1px solid #ccc;
       border-radius: 8px;
