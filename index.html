@@ -31,7 +31,7 @@
   <!-- Header Section -->
   <header>
     <h1 class="header-title">
-      LawFlow: Collecting and Simulating<br>Lawyer's Thought Process
+      LawFlow: Collecting and Simulating<br>Lawyers' Thought Processes
     </h1>
   </header>
     
@@ -40,13 +40,15 @@
   <!-- Overview Section -->
   <section class="overview-section">
     <div class="overview-container">
-      <h2>Overview</h2>
+      <h2>Research Overview</h2>
       <ul>
         <li>
-          LawyerBench is revolutionizing legal AI by navigating lawyer's thought process in the entire business entity formation process—from client consultations to customer interaction to note taking to drafting and filing legal documents. 
+
+          LawFlow is a dataset that captures full end-to-end legal workflows, revealing how law students navigate real-world drafting tasks like business entity formation, from client consultations to drafting and filing legal documents. Unlike existing legal AI benchmarks that focus on isolated tasks, LawFlow models the entire decision process, including ambiguity, iteration, and client-specific reasoning.
+
         </li>
         <li>
-          The collected process data will be used for training a cutting-edge Legal LLM Agent that navigates the entirety of legal tasks and assists lawyers in their legal processing with much less cognitive burdens. This project doesn’t just automate legal workflows; it builds a rich dataset to fuel the next generation of AI-powered legal reasoning. 
+          By comparing human and LLM-generated workflows, LawFlow uncovers how human legal reasoning is modular, adaptive, and context-sensitive—while LLMs tend to follow rigid, linear paths. These insights open new directions for building collaborative AI tools that support, rather than replace, human legal judgment.
         </li>
       </ul>
       <div class="overview-gallery">
@@ -85,57 +87,81 @@
 <!-- ---------- Platform Section ---------- -->
 <section class="platform-section">
   <div class="platform-container">
-    <h2>Data Collection Platform</h2>
+    <h2>Data Collection Tool</h2>
     <p class="platform-description">
       Our database captures real-world business entity formation scenarios, starting with a seed scenario provided by a local business. Through conversations with the business owner, a lawyer initiates the legal process, meticulously documenting and taking notes of each step—from initial discussions to formal filings. The process culminates in a finalized agreement document, serving as the definitive legal outcome.
     </p>
 
-    <div class="platform-image-container" style="text-align: center; margin: 20px 0;">
-      <img src="./assets/images/figure_2.png" alt="Platform Overview" style="max-width: 100%; height: auto; border-radius: 8px;" />
-    </div>
+<div class="platform-image-container" style="text-align: center; margin: 20px 0;">
+  <img src="./assets/images/figure_2.png" alt="Platform Overview" style="max-width: 100%; height: auto; border-radius: 8px;" />
+</div>
 
-    <h3 class="platform-how">How It Works:</h3>
-    <ul class="platform-bullets">
-      <li>📌 <strong>1. Log In</strong> – Secure access for authorized users.</li>
-      <li>📌 <strong>2. Create a New Project & Invite Collaborators</strong> – Launch projects (e.g., "Spring 2025 Entity Formation") and add RAs or professors.</li>
-      <li>📌 <strong>3. High-Level Planning Page</strong> – Visualize tasks/sub-tasks (44 total) in a node-based workflow with recommended sequences.</li>
-      <li>📌 <strong>4. Features Page</strong> – Conduct Zoom calls, take notes, edit legal documents, and access research templates—all in one place.</li>
-      <li>📌 <strong>5. Automatic Data Collection</strong> – Every action is logged in MongoDB, creating a foundation for analytics and future LLM training.</li>
-    </ul>
-  </div>
-</section>
-
+<h3 class="platform-how">Key Features:</h3>
+<ul class="platform-bullets">
+  <li>📌 <strong>Subtask Annotation</strong> – Tag actions to modular task nodes from an expert-verified legal workflow. Supports non-linear paths and rationale logging.</li>
+  <li>📌 <strong>Live Note-Taking</strong> – Persistent field for informal notes (e.g., during client intake), with full keystroke logging for later analysis.</li>
+  <li>📌 <strong>Template Library</strong> – Access and reuse agreement templates, simulating real-world use of legal precedents and boilerplate search.</li>
+  <li>📌 <strong>Legal Search Interface</strong> – Perform open and template-specific searches, reflecting how legal professionals integrate research into decisions.</li>
+  <li>📌 <strong>Document Editor</strong> – Draft agreements in a built-in word processor; all edits are logged to capture revision behavior over time.</li>
+</ul>
+<p class="platform-description">
+  This data collection tool enables us to study not just what decisions are made while drafting by law students, but also how they adapt, iterate, and navigate ambiguity across the full drafting workflow.
+</p>
  
 
   
  <!-- ---------- Entity Formation Workflow Section ---------- -->
 <section class="entity-formation-section">
-  <div class="entity-formation-container">
-    <h2>Entity Formation Workflow</h2>
-    <p class="entity-workflow-intro">
-      The higher-level planning stage is visualized within our tool, as demonstrated in the carousel below, allowing users to navigate workflows with precision and ease. 🚀
-    </p>
 
-    <div class="workflow-gallery" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin: 20px 0;">
-      <button id="workflow-prev" class="button is-small" style="flex-shrink: 0;">&larr;</button>
-      
-      <img id="workflow-image" 
-           src="./assets/images/figure_3.png" 
-           alt="Entity Workflow" 
-           style="max-width: 90%; height: auto; border-radius: 8px;" />
-      
-      <button id="workflow-next" class="button is-small" style="flex-shrink: 0;">&rarr;</button>
-    </div>
-    
-    <p class="entity-workflow-description">
-      Our business entity formation process is structured into five major tasks, each representing a crucial phase of legal workflow. 
-      Within each task, multiple sub-tasks break down the process into manageable, actionable steps.<br><br>
-      For instance, a task like “Gather Client Information” includes sub-tasks such as note-taking, gap analysis, 
-      and targeted searches—all seamlessly integrated within our node-based structure. 
-      This structured approach ensures clarity, efficiency, and consistency across every stage of the legal process.
-    </p>
-  </div>
+<!-- ---------- Entity Formation Workflow Section ---------- --> <section class="entity-formation-section"> <div class="entity-formation-container"> <h2>Entity Formation Workflow</h2> <p class="entity-workflow-intro"> Our data collection tool is rooted in a  visual, expert-informed task plan that maps out the full legal drafting workflow—from initial client intake to final agreement. 🎯 This task plan supports flexible navigation across subtasks in the data collection tool, while maintaining a clear structure rooted in real-world practice. </p>
+
+
+<div class="workflow-gallery" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin: 20px 0;">
+  <button id="workflow-prev" class="button is-small" style="flex-shrink: 0;">&larr;</button>
+  
+  <img id="workflow-image" 
+       src="./assets/images/figure_3.png" 
+       alt="Entity Workflow" 
+       style="max-width: 90%; height: auto; border-radius: 8px;" />
+  
+  <button id="workflow-next" class="button is-small" style="flex-shrink: 0;">&rarr;</button>
+</div>
+
+<p class="entity-workflow-description">
+  The workflow is organized across three levels of detail:
+</p>
+
+<ul class="platform-bullets" style="margin-bottom: 20px;">
+  <li><strong>Inter-subtask level:</strong> Major phases like client intake, memo drafting, and agreement creation.</li>
+  <li><strong>Intra-subtask level:</strong> Connected steps within each phase—e.g., gathering facts, conducting research, revising drafts.</li>
+  <li><strong>Node level:</strong> Fine-grained individual actions, such as writing a clause or asking a follow-up question.</li>
+</ul>
+
+<p class="entity-workflow-description">
+  This multi-layered structure allows us to capture the dynamic, non-linear nature of legal work—supporting both detailed analysis and AI tools that align with how real practitioners think and operate.
+</p>
+
+<p class="entity-workflow-description">
+  For example, the entity formation workflow includes five key stages:
+</p>
+
+<ul class="platform-bullets">
+  <li>📌 <strong>Information Gathering:</strong> Identify client goals, legal gaps, and jurisdictional specifics.</li>
+  <li>📌 <strong>Deciding a Recommendation:</strong> Evaluate constraints, perform legal research, and determine a course of action.</li>
+  <li>📌 <strong>Drafting a Client Memo:</strong> Summarize recommendations, highlight open issues, and prepare for feedback.</li>
+  <li>📌 <strong>Drafting the Operating Agreement:</strong> Use precedent templates, edit iteratively, and align with client needs.</li>
+  <li>📌 <strong>Assessing Tax Treatment (Optional):</strong> Consider tax impacts and consult specialists when necessary.</li>
+</ul>
+
+<p class="entity-workflow-description">
+  Together, these levels form a flexible yet robust blueprint for capturing and analyzing legal workflows in real-world scenarios.
+</p>
+
+
 </section>
+
+
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -176,7 +202,7 @@
   <div class="operating-container">
     <h2 class="section-title">Generated Operating Agreements</h2>
     <p class="section-description">
-      Our database captures real-world business entity formation scenarios, starting with a seed scenario provided by a local business. Through conversations with the business owner, a lawyer initiates the legal process, meticulously documenting each step—from initial discussions to formal filings. The process culminates in a finalized agreement document, serving as the definitive legal outcome.
+    Each scenario in our dataset is grounded in real-world business needs, with law students simulating the full legal workflow from client intake to final agreement drafting. Human workflows are flexible and iterative, often looping back to revise earlier steps. In contrast, LLMs follow a more rigid, linear path—highlighting key differences in how humans and AI approach complex legal reasoning.
     </p>
 
     <!-- Flex container to hold two columns -->
@@ -253,7 +279,7 @@
 <!-- ---------- Data Insights Section ---------- -->
 <section class="data-insights-section">
   <div class="data-insights-container">
-    <h2>Data Insights</h2>
+    <h2>Insights from LawFlow</h2>
     <div class="insights-gallery">
       <!-- Research Question -->
       <p id="insights-research" class="insights-research"></p>
@@ -357,12 +383,7 @@
         researchQuestion: "How do human and LLM-generated legal plans differ in structure?",
         src: "./assets/images/RQ1.png",
         alt: "Data Insights Slide 1",
-        insights: [
-          "The above image shows the LLM task plan nodes on the right colored by subtask, and the human task plan on the left is mapped to the LLM task plan based\
-on semantic similarity of subtasks. We can see multiple LLM subtasks correspond to the same human subtask. Black nodes indicate\
-nodes which remain unmapped in the human plan (indicating that there are some human tasks LLMs do not account for).Further, we can infer that humans plan hierarchically, starting with a few high-level\
-subtasks (number of subtasks) and expanding them into deeper, more detailed structures (tree depth and branches/subtask). In\
-contrast, LLMs generate flatter, sequential plans with more top-level subtasks but less internal organization and modularity."
+        insights: ["The image compares human and LLM task plans: while LLMs generate flat, sequential workflows with many top-level steps, human plans are more hierarchical—starting with broad subtasks and expanding into detailed, modular branches. Some human steps have no LLM equivalent (black nodes), highlighting gaps in AI’s understanding of nuanced legal tasks."
         ]
       },
       {
@@ -378,10 +399,7 @@ contrast, LLMs generate flatter, sequential plans with more top-level subtasks b
         src: "./assets/images/RQ2.png",
         alt: "Data Insights Slide 3",
         insights: [
-          "All workflows matter: Comparison of subtask connectivity\
-           across humans and tasks. The first two figures show the same \
-           human performing two different tasks. The last two figures show \
-           different humans performing tasks of similar complexity. Despite the variations, each workflow is a valid approach to completing the task."
+          "All workflows matter: Whether comparing the same person across tasks or different people on similar tasks, each workflow shows a unique yet valid path to completion, highlighting the flexibility and diversity of legal reasoning in practice."
         ]
       },
       {
@@ -389,7 +407,7 @@ contrast, LLMs generate flatter, sequential plans with more top-level subtasks b
         src: "./assets/images/RQ4.png",
         alt: "Data Insights Slide 3",
         insights: [
-          "Z-scores for each workflow step indicate alignment with human behavior. Steps are flagged as 'on track,'' 'needs review,' or 'off track,' highlighting whether they align with typical human reasoning, require further examination, or represent unusual transitions."
+          "Each workflow step is scored based on how closely it aligns with typical human behavior. Steps are flagged as 'on track,' 'needs review,' or 'off track,' helping identify actions that follow, diverge from, or significantly depart from common legal reasoning patterns."
         ]
       }
     ];
@@ -431,7 +449,7 @@ contrast, LLMs generate flatter, sequential plans with more top-level subtasks b
   <div class="dataset-card-container">
     <h2>Dataset Card</h2>
     <p class="dataset-description">
-      We collected data from humans executing different business formation scenarios and show a sample from the dataset formed below. We also have LLMs such as DeepSeek R1 and OpenAI O1 generating the same scenarios by following the Human Task Plan. Shown in the LLM tab below is a sample output from the O1 model.
+      We gathered data from law students working through real-world business formation scenarios—an example is shown below under the 'Human' tab. Using the same task plan, we also had LLMs like DeepSeek R1 and OpenAI O1 generate workflows for these scenarios. Switch to the LLM tab to see a sample output from the O1 model.
     </p>
 
     <div class="agreements-grid">
